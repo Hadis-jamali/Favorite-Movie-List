@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Favorite MOvies</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>My Favorite Movies</h1>
+      <div class="new-movie-form">
+        <form class="movie-form">
+          <div class="form-group">
+            <label for="movie">movie:</label>
+            <input type="text" id="movie" class="input-size" />
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="genre">genre:</label>
+            <input type="text" id="genre" class="input-size" />
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="release year">release year:</label>
+            <input type="number" id="release year" class="input-size" />
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="director">director:</label>
+            <input type="text" id="director" class="input-size" />
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="description">description:</label>
+            <textarea id="description" class="input-size"></textarea>
+          </div>
+          <br />
+          <button type="button" id="new-movie">Add Movie</button>
+        </form>
+      </div>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
