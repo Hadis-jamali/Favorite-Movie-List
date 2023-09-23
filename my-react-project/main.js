@@ -1,30 +1,42 @@
 let movies = [
   {
-    title: "game of thrones",
-    director: "Frank Darabont",
-    year: 1994,
-    genre: "Drama",
-    description: "jkjj",
+    title: "Blade Runner 2049",
+    director: "Denis Villeneuve",
+    year: 2017,
+    genre: "Action",
+    description:
+      "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard..",
   },
   {
-    title: "sindrella",
-    director: "Frank Darabont",
-    year: 1994,
-    genre: "Drama",
-    description: "jkjj",
+    title: "Wonder Woman",
+    director: "Patty Jenkins",
+    year: 2017,
+    genre: "Action",
+    description:
+      " Diana, an Amazonian warrior in training, leaves home to fight a war, discovering her full powers and true destiny..",
   },
   {
-    title: "friends",
-    director: "Frank Darabont",
-    year: 1994,
+    title: "Note Book",
+    director: "Nick Cassavetes",
+    year: 2004,
     genre: "Drama",
-    description: "jkjj",
+    description: "A poor yet passionate young man falls in love with a rich young woman..",
   },
 ];
 function displayMovie(movieArray) {
   movieArray.forEach((element) => {
     let movieTitle = document.createElement("h4");
-    movieTitle.innerHTML = element.title + " - " + element.genre + " ( " + element.year + " ) " + " - Director: " + element.director + " description: " + element.description;
+    movieTitle.innerHTML =
+      element.title +
+      " - " +
+      element.genre +
+      " ( " +
+      element.year +
+      " ) " +
+      " - Director: " +
+      element.director +
+      " description: " +
+      element.description;
     let app = document.getElementById("app");
     app.appendChild(movieTitle);
     console.log(element);
