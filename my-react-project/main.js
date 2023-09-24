@@ -4,23 +4,21 @@ let movies = [
     director: "Denis Villeneuve",
     year: 2017,
     genre: "Action",
-    description:
-      "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard..",
+    description: "",
   },
   {
     title: "Wonder Woman",
     director: "Patty Jenkins",
     year: 2017,
     genre: "Action",
-    description:
-      " Diana, an Amazonian warrior in training, leaves home to fight a war, discovering her full powers and true destiny..",
+    description: "",
   },
   {
     title: "Note Book",
     director: "Nick Cassavetes",
     year: 2004,
     genre: "Drama",
-    description: "A poor yet passionate young man falls in love with a rich young woman..",
+    description: "",
   },
 ];
 function displayMovie(movieArray) {
@@ -34,9 +32,7 @@ function displayMovie(movieArray) {
       element.year +
       " ) " +
       " - Director: " +
-      element.director +
-      " description: " +
-      element.description;
+      element.director;
     let app = document.getElementById("app");
     app.appendChild(movieTitle);
     console.log(element);
