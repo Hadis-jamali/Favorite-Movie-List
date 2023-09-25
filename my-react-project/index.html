@@ -9,7 +9,6 @@
   </head>
 
   <body>
-
     <!-- header -->
     <div class="accordion">
       <ul>
@@ -70,37 +69,38 @@
       <div class="new-movie-form">
         <form class="movie-form">
           <div class="form-group">
-            <label for="movie">movie:</label>
-            <input type="text" id="movie" class="input-size" />
+            <label for="title">Movie:</label>
+            <input type="text" id="title" class="input-size" />
           </div>
           <br />
           <div class="form-group">
-            <label for="genre">genre:</label>
+            <label for="genre">Genre:</label>
             <input type="text" id="genre" class="input-size" />
           </div>
           <br />
           <div class="form-group">
-            <label for="release year">release year:</label>
-            <input type="number" id="release year" class="input-size" />
+            <label for="releaseYear">Release year:</label>
+            <input type="number" id="releaseYear" class="input-size" />
           </div>
           <br />
           <div class="form-group">
-            <label for="director">director:</label>
+            <label for="director">Director:</label>
             <input type="text" id="director" class="input-size" />
           </div>
           <br />
           <div class="form-group">
-            <label for="description">description:</label>
+            <label for="description">Description:</label>
             <textarea id="description" class="input-size"></textarea>
           </div>
           <br />
-          <button type="button" id="new-movie" class="button-size">Add Movie</button>
+          <button type="button" id="new-movie" class="button-size" onclick="addMovie()">
+            Add Movie
+          </button>
         </form>
       </div>
       <div id="app"></div>
     </div>
 
-    
-    <script type="module" src="./main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>

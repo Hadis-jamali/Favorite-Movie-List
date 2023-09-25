@@ -22,20 +22,34 @@ let movies = [
   },
 ];
 function displayMovie(movieArray) {
+  let movieList = document.getElementById("app");
+  movieList.innerHTML = "";
   movieArray.forEach((element) => {
-    let movieTitle = document.createElement("h4");
-    movieTitle.innerHTML =
-      element.title +
-      " - " +
-      element.genre +
-      " ( " +
-      element.year +
-      " ) " +
-      " - Director: " +
-      element.director;
-    let app = document.getElementById("app");
-    app.appendChild(movieTitle);
+    let movieItem = document.createElement("h4");
+    movieItem.innerHTML = element.title + " - " + element.genre + " ( " + element.year + " ) ";
+    movieItem.onclick = () => showMovieDetails(element);
+
+    movieList.appendChild(movieItem);
     console.log(element);
   });
 }
 displayMovie(movies);
+
+function addMovie() {
+  let newMovie = {
+    title: document.getElementById("title").value,
+    director: document.getElementById("director").value,
+    year: document.getElementById("releaseYear").value,
+    genre: document.getElementById("genre").value,
+    description: document.getElementById("description").value,
+  };
+
+  movies.push(newMovie);
+  displayMovie(movies);
+}
+
+function showMovieDetails(movie) {
+  alert(
+    `Name: ${movie.title}\nGenre: ${movie.genre}\nRelease Year: ${movie.year}\nDirector: ${movie.director}\nDescription: ${movie.description}`
+  );
+}

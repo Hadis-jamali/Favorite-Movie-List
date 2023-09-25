@@ -41,9 +41,11 @@ h1 {
 }
 
 #app {
+  align-items: center;
   max-width: 1280px;
   padding: 10px;
   text-align: end;
+  
 }
 
 .logo {
@@ -118,6 +120,7 @@ button:focus-visible {
 .button-size {
   width: 400px;
   height: 50px;
+  margin: 5px;
 }
 
 /*header*/
