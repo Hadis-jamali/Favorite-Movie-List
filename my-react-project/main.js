@@ -54,12 +54,10 @@ function showMovieDetails(movie) {
   );
 }
 
-
 function filterMovies(genre) {
   const filteredMovies = movies.filter((movie) => movie.genre === genre);
   displayMovie(filteredMovies);
 }
-
 
 function sortMovies() {
   const sortedMovies = movies.slice().sort((a, b) => a.releaseYear - b.releaseYear);
@@ -72,11 +70,9 @@ document.getElementById("filter-button").addEventListener("click", () => {
   filterMovies(genreFilter);
 });
 
-
 function filterMovies(genre) {
   const filteredMovies = movies.filter((movie) =>
     movie.genre.toLowerCase().includes(genre.toLowerCase())
   );
   displayMovie(filteredMovies);
 }
-

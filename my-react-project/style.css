@@ -45,7 +45,6 @@ h1 {
   max-width: 1280px;
   padding: 10px;
   text-align: end;
-  
 }
 
 .logo {
@@ -237,3 +236,22 @@ a {
   }
 }
 /*header*/
+
+.filter-container {
+  width: 500px;
+  margin: 30px;
+}
+.genre-filter {
+  font-size: 20px;
+}
+.input-filter {
+  width: 250px;
+  height: 30px;
+  border-radius: 4px;
+}
+.button-filter {
+  width: 80px;
+  height: 37px;
+  border-radius: 8px;
+  margin: 5px;
+}
