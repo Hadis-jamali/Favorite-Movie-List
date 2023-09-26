@@ -53,3 +53,30 @@ function showMovieDetails(movie) {
     `Name: ${movie.title}\nGenre: ${movie.genre}\nRelease Year: ${movie.year}\nDirector: ${movie.director}\nDescription: ${movie.description}`
   );
 }
+
+
+function filterMovies(genre) {
+  const filteredMovies = movies.filter((movie) => movie.genre === genre);
+  displayMovie(filteredMovies);
+}
+
+
+function sortMovies() {
+  const sortedMovies = movies.slice().sort((a, b) => a.releaseYear - b.releaseYear);
+  displayMovie(sortedMovies);
+}
+displayMovie(movies);
+
+document.getElementById("filter-button").addEventListener("click", () => {
+  const genreFilter = document.getElementById("genre-filter").value;
+  filterMovies(genreFilter);
+});
+
+
+function filterMovies(genre) {
+  const filteredMovies = movies.filter((movie) =>
+    movie.genre.toLowerCase().includes(genre.toLowerCase())
+  );
+  displayMovie(filteredMovies);
+}
+
