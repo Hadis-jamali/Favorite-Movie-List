@@ -20,6 +20,22 @@ let movies = [
     genre: "Drama",
     description: "",
   },
+  {
+    title: "Money Heist",
+    director: "Alex Pina",
+    year: 2018,
+    genre: "crime",
+    description:
+      "An unusual group of robbers attempt to carry out the most perfect robbery in Spanish history - stealing 2.4 billion euros from the Royal Mint of Spain.",
+  },
+  {
+    title: "Suits",
+    director: "Aaron Korsh",
+    year: 2011,
+    genre: "Drama - Comedy",
+    description:
+      "On the run from a drug deal gone bad, brilliant college dropout Mike Ross finds himself working with Harvey Specter, one of New York City's best lawyers.",
+  },
 ];
 function displayMovie(movieArray) {
   let movieList = document.getElementById("app");
@@ -54,16 +70,10 @@ function showMovieDetails(movie) {
   );
 }
 
-function filterMovies(genre) {
-  const filteredMovies = movies.filter((movie) => movie.genre === genre);
-  displayMovie(filteredMovies);
-}
-
 function sortMovies() {
   const sortedMovies = movies.slice().sort((a, b) => a.releaseYear - b.releaseYear);
   displayMovie(sortedMovies);
 }
-displayMovie(movies);
 
 document.getElementById("filter-button").addEventListener("click", () => {
   const genreFilter = document.getElementById("genre-filter").value;
